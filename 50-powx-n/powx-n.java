@@ -8,16 +8,13 @@ class Solution {
         }
 
         double ans = 1.0;
-        double currentProduct = x;
 
         while (N > 0) {
-            // Agar power odd hai, toh ek base ans me multiply kar lo
-            if (N % 2 == 1) {
-                ans *= currentProduct;
+            if(N%2!=0){
+                ans=ans*x;
             }
-            // Base ko square karo aur power ko aadha
-            currentProduct *= currentProduct;
-            N /= 2;
+            x=x*x;
+            N=N/2;
         }
 
         return ans;
